@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saarthi: Revolutionizing the way you learn!</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Container and layout */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/featured/?education') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .content {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #2980b9;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #1a5980;
+        }
+
+        /* Features section */
+        .features {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2em;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        .features .feature {
+            margin-bottom: 40px;
+        }
+
+        .features .feature h3 {
+            font-size: 1.5em;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+
+        .features .feature p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Columns for better layout */
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+        }
+
+        /* About Us section */
+        .about {
+            background-color: #ecf0f1;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2em;
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+
+        .about h3 {
+            font-size: 1.5em;
+            color: #2980b9;
+            margin-top: 20px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .about ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .about ul li {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Why Choose Saarthi section */
+        .why-choose {
+            background-color: #ecf0f1;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .why-choose h2 {
+            font-size: 2em;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        .why-choose .columns {
+            justify-content: center;
+        }
+
+        .why-choose .column {
+            max-width: 300px;
+        }
+
+        /* Join the Saarthi Community section */
+        .community {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .community h2 {
+            font-size: 2em;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        .community p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* FAQs section */
+        .faqs {
+            background-color: #ecf0f1;
+            padding: 60px 20px;
+            text-align: left;
+        }
+
+        .faqs h2 {
+            font-size: 2em;
+            color: #34495e;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faqs h3 {
+            font-size: 1.5em;
+            color: #2980b9;
+            margin-top: 20px;
+        }
+
+        .faqs p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Follow Us section */
+        .follow-us {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .follow-us h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .follow-us .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .follow-us .social-icons a:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Welcome to Saarthi</h1>
+        <p>Revolutionizing the way you learn!</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Empowering Education, One Step at a Time</h2>
+            <p>
+                At Saarthi, we believe in the transformative power of education. Our intuitive platform is designed to
+                streamline the learning experience for students, educators, and institutions alike.
+            </p>
+            <p>
+                Fostering an environment where knowledge thrives, so you can achieve your optimum potential.
+            </p>
+            <a href="#" class="button">Get Started</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <h2>Features and Benefits</h2>
+
+        <div class="feature">
+            <h3>For Students:</h3>
+            <div class="columns">
+                <div class="column">
+                    <h4>Personalized Learning Paths</h4>
+                    <p>Say goodbye to those boring learning tutorials! Personalize your learning with tailored content and courses to match your unique learning style and pace.</p>
+                </div>
+                <div class="column">
+                    <h4>Interactive Content</h4>
+                    <p>Enhance your understanding and retention with several multimedia resources, quizzes, and interactive assignments.</p>
+                </div>
+                <div class="column">
+                    <h4>Progress Tracking</h4>
+                    <p>Isn’t it amazing to keep track of your achievements, grades, and milestones? Well, you can just do that with our intuitive dashboard.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>For Educators:</h3>
+            <div class="columns">
+                <div class="column">
+                    <h4>Course Management</h4>
+                    <p>Creating, organizing, and managing courses is now easier than ever before! Saarthi’s user-friendly tools allow you to do just that with ease.</p>
+                </div>
+                <div class="column">
+                    <h4>Real-Time Analytics</h4>
+                    <p>Tailor your teaching strategies by gaining insights into student performance and engagement.</p>
+                </div>
+                <div class="column">
+                    <h4>Collaboration Tools</h4>
+                    <p>Foster a collaborative learning environment with discussion forums, group projects, and peer reviews.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>For Institutions:</h3>
+            <div class="columns">
+                <div class="column">
+                    <h4>Scalable Solutions</h4>
+                    <p>Whether it be a small school or a large university, our solutions can be adapted by institutions of all sizes.</p>
+                </div>
+                <div class="column">
+                    <h4>Integration Capabilities</h4>
+                    <p>At Saarthi, we understand that third-party integrations shouldn’t be a daunting task. Hence, you can Seamlessly integrate Saarthi with existing systems and tools.</p>
+                </div>
+                <div class="column">
+                    <h4>Data Security</h4>
+                    <p>We value your privacy! At Saarthi, we practice robust security measures to ensure the safety and privacy of institutional data.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>Saarthi Offers You Everything You May Need to Create or Sell Insightful Courses</h3>
+            <div class="columns">
+                <div class="column">
+                    <h4>Third-party Integrations</h4>
+                    <p>Seamlessly integrate your favorite tools and software.</p>
+                </div>
+                <div class="column">
+                    <h4>Secure Platform</h4>
+                    <p>Saarthi deploys the highest security standards to ensure your content is safe from piracy and unauthorized access.</p>
+                </div>
+                <div class="column">
+                    <h4>Payment Gateways</h4>
+                    <p>Easily accept payments through various payment methods.</p>
+                </div>
+                <div class="column">
+                    <h4>Community</h4>
+                    <p>Interact with other creators and grow together as a community.</p>
+                </div>
+                <div class="column">
+                    <h4>Marketing Tools</h4>
+                    <p>Saarthi helps you sell your courses effortlessly with inbuilt marketing automation.</p>
+                </div>
+                <div class="column">
+                    <h4>Advanced Analytics</h4>
+                    <p>Stay up-to-date and make informed decisions with advanced analytics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2>About Us</h2>
+        <p>Saarthi: Guiding You Towards Educational Excellence</p>
+        <p>Welcome to Saarthi, your trusted partner in the journey of education. We are a pioneering Learning Management System (LMS) dedicated to enhancing the educational experience for students, educators, and institutions around the globe.</p>
+        
+        <h3>Our Mission</h3>
+        <p>At Saarthi, our mission is to make quality education accessible, engaging, and effective for everyone. We strive to empower learners and educators by providing a robust platform that supports personalized learning, fosters collaboration, and drives academic success.</p>
+        
+        <h3>Our Vision</h3>
+        <p>We envision a world where technology bridges the gap between learners and knowledge, making education more inclusive, interactive, and impactful. Saarthi aims to be at the forefront of this transformation, continuously innovating to meet the evolving needs of the educational community.</p>
+        
+        <h3>Our Values</h3>
+        <ul>
+            <li>Innovation: We are committed to leveraging cutting-edge technology to create innovative solutions that enhance the learning experience.</li>
+            <li>Quality: We prioritize delivering high-quality content and services that meet the highest standards of educational excellence.</li>
+            <li>Accessibility: We believe that everyone should have access to quality education, regardless of their background or location.</li>
+            <li>Collaboration: We foster a collaborative environment where educators, students, and institutions can work together to achieve their goals.</li>
+            <li>Support: We provide unwavering support to our users, ensuring they have the resources and assistance they need to succeed.</li>
+        </ul>
+        
+        <h3>What We Offer</h3>
+        <ul>
+            <li>Comprehensive Learning Solutions: From personalized learning paths and interactive content to real-time analytics and collaborative tools, Saarthi offers a complete suite of features to support diverse learning needs.</li>
+            <li>Scalability and Integration: Our platform is designed to scale with your institution and seamlessly integrate with existing systems, ensuring a smooth and efficient transition.</li>
+            <li>Security and Privacy: We uphold the highest standards of data security and privacy, ensuring that your information is protected at all times.</li>
+        </ul>
+    </div>
+
+    <div class="why-choose">
+        <h2>Why Choose Saarthi?</h2>
+        <div class="columns">
+            <div class="column">
+                <h4>User-Friendly Interface</h4>
+                <p>Designed with simplicity and considering ease-of-use in mind, making navigation a breeze for all users.</p>
+            </div>
+            <div class="column">
+                <h4>Comprehensive Support</h4>
+                <p>Our dedicated support team is always here to assist you with any questions or issues.</p>
+            </div>
+            <div class="column">
+                <h4>Continuous Improvement</h4>
+                <p>We are committed to continuous development, regularly updating our platform with new features and improvements based on user feedback.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="community">
+        <h2>Join the Saarthi Community</h2>
+        <p>Embark on a journey of discovery and growth with Saarthi. Whether you're a student eager to learn, an educator passionate about teaching, or an institution aiming to enhance educational delivery, Saarthi will guide you every step of the way.</p>
+        <a href="#" class="button">Sign Up Today</a>
+        <p>and Experience the Future of Learning!</p>
+    </div>
+
+    <div class="faqs">
+        <h2>FAQs</h2>
+
+        <h3>What is Saarthi LMS?</h3>
+        <p>Saarthi is a New Gen Learning Management System designed to enhance the educational experience for students, educators, and institutions. Our platform offers a range of tools and features to support personalized learning, collaboration, and effective course management.</p>
+
+        <h3>For Students</h3>
+        <p><strong>How do I access my courses?</strong><br>
+            After logging in to your Saarthi LMS account, you can access your courses from the dashboard. All enrolled courses will be listed under the "My Courses" section.</p>
+
+        <p><strong>How Can I track my progress?</strong><br>
+            You can track your progress through your personalized dashboard. It provides an overview of your completed assignments, quiz scores, and overall performance in each course.</p>
+
+        <p><strong>What should I do if I forget my password?</strong><br>
+            If you forget your password, click on the "Forgot Password" link on the login page. Follow the instructions to reset your password via email.</p>
+
+        <h3>For Educators</h3>
+        <p><strong>How do I create a new course?</strong><br>
+            To create a new course, log in to your educator account, go to the "Course Management" section, and click on "Create New Course." Follow the prompts to add course details, upload content, and set up assessments.</p>
+
+        <p><strong>Can I integrate third-party tools into my courses?</strong><br>
+            Yes, Saarthi LMS supports integration with various third-party tools and platforms, including Google Drive, Microsoft Office, and more. Visit our Integrations Page for a full list of supported tools.</p>
+
+        <p><strong>How can I communicate with my students?</strong><br>
+            You can communicate with your students using the built-in messaging system, discussion forums, and announcement features. These tools help facilitate effective and timely communication.</p>
+
+        <h3>For Institutions</h3>
+        <p><strong>Is Saarthi LMS scalable for large institutions?</strong><br>
+            Absolutely. Saarthi LMS is designed to scale according to the needs of your institution, whether you are a small school or a large university. Our platform can handle a large number of users and courses seamlessly.</p>
+
+        <p><strong>What kind of support do you offer for institutions?</strong><br>
+            We offer dedicated support for institutions, including onboarding assistance, training sessions, and a dedicated account manager to ensure a smooth experience.</p>
+
+        <p><strong>How secure is our data on Saarthi LMS?</strong><br>
+            Data security is our top priority. Saarthi LMS employs robust security measures, including data encryption, regular backups, and compliance with international data protection regulations to ensure the safety and privacy of your data.</p>
+
+        <h3>Technical Support</h3>
+        <p><strong>Are there any system requirements for using Saarthi LMS?</strong><br>
+            Saarthi LMS is a web-based platform accessible via modern web browsers such as Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge. For the best experience, ensure your browser is up-to-date and you have a stable internet connection.</p>
+    </div>
+
+    <div class="follow-us">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+            <a href="#">&#x1F4F7; Instagram</a>
+            <a href="#">&#x1F4F7; Facebook</a>
+            <a href="#">&#x1F4F7; Twitter</a>
+            <a href="#">&#x1F4F7; LinkedIn</a>
+        </div>
+    </div>
+</body>
+
+</html>
